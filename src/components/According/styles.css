@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordian {
+    border: 1px solid rgb(241, 227, 201);
+    background-color:rgb(245, 219, 172) ;
+    color: rgb(253, 251, 251);
+
+
+}
