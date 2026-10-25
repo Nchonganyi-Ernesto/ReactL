@@ -1,10 +1,10 @@
 import According from './components/According';
 import Randomcolor from './components/Randomcolor';
 import StarRating from './components/star-Rating';
-import Hero from './components/Hero';
 import ImageSlider from './components/imageslider';
 import Card from './components/card';
 import CardList from './components/card';
+import Homepage from './Page/homepage/homepage';
 
 function App(){
     return (
@@ -14,7 +14,8 @@ function App(){
         {/* <Randomcolor/>*/}
         {/* <StarRating noOfStars={10}/>*/}
        { /*<ImageSlider/>*/}
-          <CardList/>
+       { /*  <CardList/> */}
+       <Homepage/>
       </div>
         
 

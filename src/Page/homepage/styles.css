@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Navbar container with 3-column grid for perfect centering */
+.navbar-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 18px 140px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/* Brand Logo (aligned to the far left) */
+.nav-logo {
+    justify-self: start;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.3px;
+    cursor: pointer;
+}
+
+/* Navigation items (dead-centered) */
+.nav-items {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-items li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2b2b2b;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-items li:hover {
+    color: #000000;
+}
+
+/* Auth Buttons (aligned to the far right) */
+.auth-buttons {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.auth-buttons button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+}
+
+/* First button ("sign in") subtle text link */
+.auth-buttons button:first-child {
+    background: transparent;
+    border: none;
+    color: #333333;
+    padding: 8px 14px;
+}
+
+.auth-buttons button:first-child:hover {
+    color: #000000;
+}
+
+/* Outlined button matching the "Login" button in the image */
+.auth-buttons button:last-child {
+    background: transparent;
+    border: 1px solid #333333;
+    color: #111111;
+    border-radius: 8px;
+    padding: 9px 28px;
+}
+
+.auth-buttons button:last-child:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 190px 70px;
+    background-color: #ffffff;
+    min-height: calc(100vh - 75px);
+    gap: 40px;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 580px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.22;
+    color: #121212;
+    letter-spacing: -0.6px;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+/* Coral highlight matching the illustration cards and button */
+.highlight-text {
+    color: #ff5b4d;
+    font-weight: 700;
+}
+
+.hero-subtext {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #767676;
+    max-width: 380px;
+}
+
+/* Hero CTA Buttons */
+.hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.cta-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-primary {
+    background-color: #ff5b4d;
+    color: #ffffff;
+    border: 1px solid #ff5b4d;
+    padding: 14px 34px;
+    box-shadow: 0 8px 20px -4px rgba(255, 91, 77, 0.35);
+}
+
+.cta-primary:hover {
+    background-color: #f04838;
+    border-color: #f04838;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -4px rgba(255, 91, 77, 0.45);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1.5px solid #dcdcdc;
+    padding: 14px 28px;
+}
+
+.cta-secondary:hover {
+    border-color: #111111;
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    user-select: none;
+}
+
+/* ==========================================================================
+   About Section (Image Left, Text Right)
+   ========================================================================== */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 190px 100px;
+    background-color: #ffffff;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: translateY(-4px);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 560px;
+}
+
+.section-badge {
+    display: inline-block;
+    background-color: rgba(255, 91, 77, 0.12);
+    color: #ff5b4d;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.about-title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #121212;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #64748b;
+    margin-bottom: 36px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px 18px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+}
+
+.feature-item:hover {
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px;
+    background: rgba(255, 91, 77, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #121212;
+    margin-bottom: 3px;
+}
+
+.feature-details p {
+    font-size: 13.5px;
+    color: #71717a;
+    line-height: 1.5;
+}
+
+.about-ctas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+    .hero-container,
+    .about-container {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .navbar-container,
+    .hero-container,
+    .about-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .hero-title,
+    .about-title {
+        font-size: 34px;
+    }
+
+    .hero-image img,
+    .about-image img {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 820px) {
+    .navbar-container {
+        padding: 16px 24px;
+    }
+
+    .hero-container,
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px 60px;
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .about-container {
+        flex-direction: column-reverse; /* Shows text first or image first */
+    }
+
+    .hero-text,
+    .about-text {
+        max-width: 100%;
+    }
+
+    .hero-title,
+    .about-title {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .hero-subtext,
+    .about-description {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .about-features {
+        text-align: left;
+    }
+
+    .hero-ctas,
+    .about-ctas {
+        justify-content: center;
+    }
+
+    .hero-image,
+    .about-image {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image img,
+    .about-image img {
+        max-width: 360px;
+    }
+}
